@@ -1,0 +1,91 @@
+# RELEASE NOTES
+
+Product Name: Colorful Authentication Pages
+Release Version: v1.0.0
+Release Date: 21 January 2026
+
+---
+
+## OVERVIEW
+
+This release introduces modern, colorful, and fully responsive authentication pages including a Login page and a Signup page. The pages are built using pure HTML, CSS, and JavaScript with a focus on clean UI, smooth user experience, and easy integration with any backend.
+
+---
+
+## WHAT'S INCLUDED
+
+1. Colorful Login Page
+
+   * Gradient background with glassmorphism UI
+   * Email & password validation
+   * Show/Hide password option
+   * Remember me checkbox
+   * Social login button placeholders
+   * Mobile-friendly responsive design
+
+2. Colorful Signup Page
+
+   * First name & last name fields
+   * Email and password validation
+   * Terms & Conditions checkbox
+   * Success message on valid submission
+   * Matching design with login page
+   * Fully responsive layout
+
+---
+
+## TECHNOLOGY STACK
+
+* HTML5
+* CSS3 (Flexbox, Gradients, Glassmorphism)
+* Vanilla JavaScript (No external libraries)
+
+---
+
+## BROWSER SUPPORT
+
+* Google Chrome (Latest)
+* Microsoft Edge (Latest)
+* Mozilla Firefox (Latest)
+* Safari (Latest)
+
+---
+
+## INSTALLATION & USAGE
+
+1. Download or copy the HTML files.
+2. Open the files directly in a browser OR
+3. Deploy them on any web server.
+4. Connect form actions to your backend (API, PHP, Node, etc.) as required.
+
+---
+
+## KNOWN LIMITATIONS
+
+* Social login buttons are UI-only (no OAuth integration).
+* Forms use frontend validation only.
+
+---
+
+## FUTURE ENHANCEMENTS
+
+* Backend authentication integration
+* OAuth (Google, Facebook, Apple) login
+* Dark / Light theme toggle
+* Password strength meter
+
+---
+
+## LICENSE
+
+This release is provided for free use and customization.
+
+---
+
+## AUTHOR
+
+Created by: Pankaj Masaye
+
+---
+
+## END OF RELEASE NOTES
