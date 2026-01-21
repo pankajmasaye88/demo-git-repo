@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Colorful Signup</title>
+  <style>
+    :root{
+      --bg1:#7b61ff;
+      --bg2:#4ad9ff;
+      --glass:rgba(255,255,255,0.12);
+      --card:rgba(255,255,255,0.08);
+      --text:#ffffff;
+      --success:#2ee6a7;
+      --danger:#ff6b6b;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial}
+    body{
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,var(--bg1),var(--bg2));
+      color:var(--text);
+      padding:32px;
+    }
+    .blob{
+      position:absolute;
+      width:320px;height:320px;
+      border-radius:50%;
+      filter:blur(60px);
+      opacity:.5;
+      pointer-events:none;
+      animation:float 10s ease-in-out infinite;
+    }
+    .blob.a{background:#ff7eb3;top:-80px;left:-100px}
+    .blob.b{background:#ffd86b;bottom:-80px;right:-100px;animation-duration:14s}
+    @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(20px)}100%{transform:translateY(0)}}
+
+    .card{
+      width:100%;max-width:460px;
+      background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.04));
+      border-radius:18px;
+      padding:28px;
+      backdrop-filter:blur(12px);
+      box-shadow:0 20px 40px rgba(0,0,0,.35);
+      border:1px solid rgba(255,255,255,.1);
+      position:relative;
+    }
+    h1{margin:0 0 6px;font-size:1.7rem}
+    p.lead{margin:0 0 18px;opacity:.9}
+
+    form{display:grid;gap:12px}
+    label{font-size:.85rem}
+    .input{
+      display:flex;align-items:center;
+      background:var(--card);
+      border-radius:10px;
+      padding:10px 12px;
+      border:1px solid rgba(255,255,255,.06);
+    }
+    .input input{
+      flex:1;
+      background:transparent;
+      border:0;
+      outline:none;
+      color:#fff;
+      font-size:1rem;
+    }
+
+    .row{display:flex;gap:12px}
+
+    .btn{
+      margin-top:6px;
+      padding:12px;
+      border-radius:12px;
+      border:0;
+      cursor:pointer;
+      font-weight:600;
+      font-size:1rem;
+      background:linear-gradient(90deg,#2ee6a7,#7bffcb);
+      color:#043;
+    }
+
+    .small{font-size:.85rem;opacity:.9}
+    .error{font-size:.85rem;color:var(--danger);display:none}
+    .success{font-size:.9rem;color:var(--success);display:none}
+
+    .footer{text-align:center;margin-top:14px}
+
+    @media(max-width:480px){
+      body{padding:18px}
+      .card{padding:22px}
+    }
+  </style>
+</head>
+<body>
+  <div class="blob a"></div>
+  <div class="blob b"></div>
+
+  <main class="card">
+    <h1>Create Account 🚀</h1>
+    <p class="lead">Join us and start your journey</p>
+
+    <form id="signupForm" novalidate>
+      <div class="row">
+        <div style="flex:1">
+          <label for="fname">First Name</label>
+          <div class="input"><input id="fname" required placeholder="John"></div>
+        </div>
+        <div style="flex:1">
+          <label for="lname">Last Name</label>
+          <div class="input"><input id="lname" required placeholder="Doe"></div>
+        </div>
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <div class="input"><input id="email" type="email" required placeholder="you@example.com"></div>
+        <div id="emailErr" class="error">Invalid email address</div>
+      </div>
+
+      <div>
+        <label for="password">Password (min 6 chars)</label>
+        <div class="input"><input id="password" ty
